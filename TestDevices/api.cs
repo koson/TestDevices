@@ -30,7 +30,7 @@ namespace TestDevices
         //BaudRate_600 = 600,
         //BaudRate_1200 = 1200,
         //BaudRate_2400 = 2400,
-        BaudRate_4800 = 4800,
+        //BaudRate_4800 = 4800,
         BaudRate_9600 = 9600,
         BaudRate_14400 = 14400,
         BaudRate_19200 = 19200,
