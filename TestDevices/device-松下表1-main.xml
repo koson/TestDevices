@@ -24,6 +24,22 @@
       </cmdInfos>
     </main>
     <main>
+      <name>AlL_VAR</name>
+      <address>0092</address>
+      <csharpType>2</csharpType>
+      <unitFactor>1</unitFactor>
+      <daDuan>false</daDuan>
+      <cmdInfos>
+        <CmdInfo>
+          <name>zssyggl</name>
+          <address>0092</address>
+          <csharpType>System.Int32</csharpType>
+          <unitFactor>0.01</unitFactor>
+          <daDuan>false</daDuan>
+        </CmdInfo>
+      </cmdInfos>
+    </main>
+    <main>
       <name>AlL_V_A</name>
       <address>00A4</address>
       <csharpType>25</csharpType>
@@ -69,22 +85,6 @@
           <name>a3</name>
           <address>00B8</address>
           <csharpType>System.UInt32</csharpType>
-          <unitFactor>0.01</unitFactor>
-          <daDuan>false</daDuan>
-        </CmdInfo>
-      </cmdInfos>
-    </main>
-    <main>
-      <name>AlL_VAR</name>
-      <address>0092</address>
-      <csharpType>2</csharpType>
-      <unitFactor>1</unitFactor>
-      <daDuan>false</daDuan>
-      <cmdInfos>
-        <CmdInfo>
-          <name>zssyggl</name>
-          <address>0092</address>
-          <csharpType>System.Int32</csharpType>
           <unitFactor>0.01</unitFactor>
           <daDuan>false</daDuan>
         </CmdInfo>
