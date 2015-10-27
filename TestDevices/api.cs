@@ -44,7 +44,7 @@ namespace TestDevices
         //BaudRate_256000 = 256000
     }
     public class api
-    {        
+    {
         public static void commSetSerialPara<T>(ComboBox obj, object indexOrText, bool isMenuint)
         {
             try
@@ -88,7 +88,15 @@ namespace TestDevices
             {
                 obj.Items.Add(str);
             }
-            obj.SelectedIndex = index;
+            var exit4 = strs.Where(m => m.ToLower().Equals("com4")).FirstOrDefault();
+            if (exit4 != null)
+            {
+                obj.Text = "COM4";
+            }
+            else
+            {
+                obj.SelectedIndex = index;
+            }
         }
         /// <summary>
         /// 设置串口号
