@@ -65,7 +65,7 @@ namespace TestDevices
         }
         void autowith()
         {
-            groupBox1.Width = this.Width - groupBox1.Left - 50;
+            groupBox1.Width = this.Width - groupBox1.Left - 20;
             groupBox1.Height = this.Height - groupBox1.Top - 50;
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -183,6 +183,7 @@ namespace TestDevices
             ushort main_allLen = 0;
             ushort main_startAddress = 0;
             ushort main_npoints = 0;
+            var rountLen = 2;
             ushort[] main_Alldd = new ushort[] { };
 
             object ddvalue = null;
@@ -209,8 +210,9 @@ namespace TestDevices
 
                 IModbusSerialMaster master = ModbusSerialMaster.CreateRtu(_sp);
 
-                var mains = Ints.FromXML(tmpCmdInfoFile).Mains;
-                var CmdInfos = Ints.FromXML(tmpCmdInfoFile).CmdInfos;
+                var devices=Ints.FromXML(tmpCmdInfoFile);
+                var mains = devices.Mains;
+                var CmdInfos = devices.CmdInfos;
 
                 byte slaveId = byte.Parse(cbox7ID.Text);
 
@@ -218,7 +220,7 @@ namespace TestDevices
                 {
                     foreach (var main in mains)
                     {
-                        getInfoPower("***********采集项目[" + main.Name + "],采集地址[" + main.Address + ",连续数量：" + main.CsharpType + "],设备地址：[" + slaveId + "]");
+                        getInfoPower("***********采集项目[" + main.Name + "]*************,采集地址[" + main.Address + ",连续数量：" + main.CsharpType + "],设备地址：[" + slaveId + "]");
                         main_allLen = Convert.ToUInt16(main.CsharpType);
                         main_startAddress = Convert.ToUInt16(main.Address, 16);
                         main_npoints = Convert.ToUInt16(main.CsharpType);
@@ -231,7 +233,7 @@ namespace TestDevices
                         {
 
                             var tomethod = "To" + info.CsharpType.Split('.')[1];
-                            var rountLen = 2;
+                           
                             if (info.UnitFactor < 1)
                             {
                                 rountLen = info.UnitFactor.ToString().Length - 1;
@@ -276,7 +278,7 @@ namespace TestDevices
                     foreach (CmdInfo info in CmdInfos)
                     {
                         var tomethod = "To" + info.CsharpType.Split('.')[1];
-                        var rountLen = 2;
+                       
                         if (info.UnitFactor < 1)
                         {
                             rountLen = info.UnitFactor.ToString().Length - 1;
@@ -366,9 +368,11 @@ namespace TestDevices
 
                 if (CmdInfo == null)
                 {
-                    timer.Stop();
+                    timer.Start();
 
                     btn2NewTest_Click(null, null);
+
+                    timer.Stop();
                     return;
                 }
                 initSP();
