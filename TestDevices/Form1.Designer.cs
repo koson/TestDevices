@@ -46,8 +46,6 @@
             this.comb0Devices = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btn2Power = new System.Windows.Forms.Button();
-            this.btn1Alert = new System.Windows.Forms.Button();
             this.cbox7ID = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -231,28 +229,6 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // btn2Power
-            // 
-            this.btn2Power.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn2Power.Location = new System.Drawing.Point(280, 113);
-            this.btn2Power.Name = "btn2Power";
-            this.btn2Power.Size = new System.Drawing.Size(131, 52);
-            this.btn2Power.TabIndex = 0;
-            this.btn2Power.Text = "电表测试";
-            this.btn2Power.UseVisualStyleBackColor = true;
-            this.btn2Power.Click += new System.EventHandler(this.btn2Power_Click);
-            // 
-            // btn1Alert
-            // 
-            this.btn1Alert.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn1Alert.Location = new System.Drawing.Point(280, 41);
-            this.btn1Alert.Name = "btn1Alert";
-            this.btn1Alert.Size = new System.Drawing.Size(131, 52);
-            this.btn1Alert.TabIndex = 0;
-            this.btn1Alert.Text = "报警灯测试";
-            this.btn1Alert.UseVisualStyleBackColor = true;
-            this.btn1Alert.Click += new System.EventHandler(this.button1_Click);
-            // 
             // cbox7ID
             // 
             this.cbox7ID.FormattingEnabled = true;
@@ -306,12 +282,12 @@
             // 
             // btn2NewTest
             // 
-            this.btn2NewTest.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn2NewTest.Location = new System.Drawing.Point(417, 113);
+            this.btn2NewTest.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn2NewTest.Location = new System.Drawing.Point(304, 68);
             this.btn2NewTest.Name = "btn2NewTest";
-            this.btn2NewTest.Size = new System.Drawing.Size(131, 52);
+            this.btn2NewTest.Size = new System.Drawing.Size(131, 78);
             this.btn2NewTest.TabIndex = 0;
-            this.btn2NewTest.Text = "电表测试New_main";
+            this.btn2NewTest.Text = "测试";
             this.btn2NewTest.UseVisualStyleBackColor = true;
             this.btn2NewTest.Click += new System.EventHandler(this.btn2NewTest_Click);
             // 
@@ -335,10 +311,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbox7ID);
-            this.Controls.Add(this.btn1Alert);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn2NewTest);
-            this.Controls.Add(this.btn2Power);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -368,8 +342,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button btn2Power;
-        private System.Windows.Forms.Button btn1Alert;
         private System.Windows.Forms.ComboBox cbox7ID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox txt1Rece;

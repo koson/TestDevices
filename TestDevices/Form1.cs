@@ -89,47 +89,17 @@ namespace TestDevices
                 cbox4StopBits.SelectedIndex = 1;
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             txt1Rece.Text = "开始测试报警设备.";
-            btn1Alert.Enabled = false;
-            string alarmPort = cbox0PortName.Text;
-            if (alarmPort != null && alarmPort.ToUpper().StartsWith("COM"))
+            try
             {
-                short[] d = new short[] { 0, 0, 0, 0 };
-                ModbusPoll mp = new ModbusPoll();
-                try
-                {
-                    initSP();
-
-                    for (int i = 0; i < 4; i++)
-                    {
-                        d[i] = 1;
-                        txt1Rece.Invoke(new MethodInvoker(delegate()
-                        {
-                            txt1Rece.Text += "\n" + (i + 1).ToString();
-                        }));
-                        mp.StartPoll(_sp, d);
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    txt1Rece.Text += "\n访问报警设备异常:" + ex.Message;
-                    btn1Alert.Enabled = true;
-                }
-                finally
-                {
-                    mp.StopPoll();
-                }
+                testArlert();
             }
-            else
+            catch (Exception ex)
             {
-                txt1Rece.Text += "\n没有发现报警串口,不报警!";
+                txt1Rece.Text += "\n访问报警设备异常:" + ex.Message;
             }
-            txt1Rece.Text += "\n报警设备测试完成.";
-            btn1Alert.Enabled = true;
         }
         void initSP()
         {
@@ -177,8 +147,46 @@ namespace TestDevices
                 lbl0Msg.Text = msg;
             }));
         }
+        void testArlert()
+        {
+            txt1Rece.Text = "**************************开始测试报警设备****************************";
+            string alarmPort = cbox0PortName.Text;
+            if (alarmPort != null && alarmPort.ToUpper().StartsWith("COM"))
+            {
+                short[] d = new short[] { 0, 0, 0, 0 };
+                ModbusPoll mp = new ModbusPoll();
+                try
+                {
+                    initSP();
 
-        private void btn2NewTest_Click(object sender, EventArgs e)
+                    for (int i = 0; i < 4; i++)
+                    {
+                        d[i] = 1;
+                        txt1Rece.Invoke(new MethodInvoker(delegate()
+                        {
+                            txt1Rece.Text += "\n灯：" + (i + 1).ToString();
+                        }));
+                        mp.StartPoll(_sp, d);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    txt1Rece.Text += "\n访问报警设备异常:" + ex.Message;
+                    throw ex;
+                }
+                finally
+                {
+                    mp.StopPoll();
+                }
+            }
+            else
+            {
+                txt1Rece.Text += "\n没有发现报警串口,不报警!";
+            }
+            txt1Rece.Text += "\n报警设备测试完成.";
+        }
+        void testDianBiao()
         {
             ushort main_allLen = 0;
             ushort main_startAddress = 0;
@@ -191,8 +199,7 @@ namespace TestDevices
             Stopwatch timer = new Stopwatch();
             try
             {
-                txt1Rece.Text = "开始测试电表: " + cbox7ID.Text + " 设备.";
-                this.btn2NewTest.Enabled = false;
+                txt1Rece.Text = "************************ 开始测试电表: " + cbox7ID.Text + " 设备. ***********************";
                 this.Cursor = Cursors.WaitCursor;
                 var devicefile = comb0Devices.Text;
                 if (string.IsNullOrEmpty(devicefile))
@@ -210,7 +217,7 @@ namespace TestDevices
 
                 IModbusSerialMaster master = ModbusSerialMaster.CreateRtu(_sp);
 
-                var devices=Ints.FromXML(tmpCmdInfoFile);
+                var devices = Ints.FromXML(tmpCmdInfoFile);
                 var mains = devices.Mains;
                 var CmdInfos = devices.CmdInfos;
 
@@ -233,7 +240,7 @@ namespace TestDevices
                         {
 
                             var tomethod = "To" + info.CsharpType.Split('.')[1];
-                           
+
                             if (info.UnitFactor < 1)
                             {
                                 rountLen = info.UnitFactor.ToString().Length - 1;
@@ -278,7 +285,7 @@ namespace TestDevices
                     foreach (CmdInfo info in CmdInfos)
                     {
                         var tomethod = "To" + info.CsharpType.Split('.')[1];
-                       
+
                         if (info.UnitFactor < 1)
                         {
                             rountLen = info.UnitFactor.ToString().Length - 1;
@@ -331,7 +338,8 @@ namespace TestDevices
                 {
                     timer.Stop();
                 }
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw ex;
             }
             finally
             {
@@ -345,9 +353,36 @@ namespace TestDevices
                 {
                     _sp.Close();
                 }
-                this.btn2NewTest.Enabled = true;
                 this.Cursor = Cursors.Default;
             }
+        }
+        private void btn2NewTest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (radioButton1.Checked)
+                {
+                    testDianBiao();
+                }
+                else if (radioButton2.Checked)
+                {
+                    testArlert();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (_sp.IsOpen)
+                {
+                    _sp.Close();
+                }
+                btn2NewTest.Enabled = true;
+                this.Cursor = Cursors.Default;
+            }
+
         }
         private void btn2Power_Click(object sender, EventArgs e)
         {
@@ -355,7 +390,6 @@ namespace TestDevices
             try
             {
                 txt1Rece.Text = "开始测试电表: " + cbox7ID.Text + " 设备.";
-                this.btn2Power.Enabled = false;
                 this.Cursor = Cursors.WaitCursor;
                 var devicefile = comb0Devices.Text;
                 if (string.IsNullOrEmpty(devicefile))
@@ -462,10 +496,7 @@ namespace TestDevices
                 {
                     _sp.Close();
                 }
-                this.btn2Power.Enabled = true;
                 this.Cursor = Cursors.Default;
-
-
 
             }
 
