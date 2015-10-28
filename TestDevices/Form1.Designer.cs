@@ -59,7 +59,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 139);
+            this.label4.Location = new System.Drawing.Point(61, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 12);
             this.label4.TabIndex = 27;
@@ -68,7 +68,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 168);
+            this.label6.Location = new System.Drawing.Point(61, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 12);
             this.label6.TabIndex = 26;
@@ -77,31 +77,31 @@
             // cbox4StopBits
             // 
             this.cbox4StopBits.FormattingEnabled = true;
-            this.cbox4StopBits.Location = new System.Drawing.Point(89, 136);
+            this.cbox4StopBits.Location = new System.Drawing.Point(132, 142);
             this.cbox4StopBits.Name = "cbox4StopBits";
             this.cbox4StopBits.Size = new System.Drawing.Size(147, 20);
-            this.cbox4StopBits.TabIndex = 5;
+            this.cbox4StopBits.TabIndex = 6;
             // 
             // cbox3Parity
             // 
             this.cbox3Parity.FormattingEnabled = true;
-            this.cbox3Parity.Location = new System.Drawing.Point(89, 165);
+            this.cbox3Parity.Location = new System.Drawing.Point(132, 171);
             this.cbox3Parity.Name = "cbox3Parity";
             this.cbox3Parity.Size = new System.Drawing.Size(147, 20);
-            this.cbox3Parity.TabIndex = 4;
+            this.cbox3Parity.TabIndex = 7;
             // 
             // cbox2DataBits
             // 
             this.cbox2DataBits.FormattingEnabled = true;
-            this.cbox2DataBits.Location = new System.Drawing.Point(89, 110);
+            this.cbox2DataBits.Location = new System.Drawing.Point(132, 116);
             this.cbox2DataBits.Name = "cbox2DataBits";
             this.cbox2DataBits.Size = new System.Drawing.Size(147, 20);
-            this.cbox2DataBits.TabIndex = 3;
+            this.cbox2DataBits.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 113);
+            this.label3.Location = new System.Drawing.Point(61, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 12);
             this.label3.TabIndex = 22;
@@ -111,15 +111,15 @@
             // cbox1BaudRate
             // 
             this.cbox1BaudRate.FormattingEnabled = true;
-            this.cbox1BaudRate.Location = new System.Drawing.Point(89, 84);
+            this.cbox1BaudRate.Location = new System.Drawing.Point(132, 90);
             this.cbox1BaudRate.Name = "cbox1BaudRate";
             this.cbox1BaudRate.Size = new System.Drawing.Size(147, 20);
-            this.cbox1BaudRate.TabIndex = 2;
+            this.cbox1BaudRate.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 87);
+            this.label2.Location = new System.Drawing.Point(61, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 12);
             this.label2.TabIndex = 20;
@@ -128,16 +128,16 @@
             // cbox0PortName
             // 
             this.cbox0PortName.FormattingEnabled = true;
-            this.cbox0PortName.Location = new System.Drawing.Point(89, 58);
+            this.cbox0PortName.Location = new System.Drawing.Point(132, 64);
             this.cbox0PortName.Name = "cbox0PortName";
             this.cbox0PortName.Size = new System.Drawing.Size(147, 20);
-            this.cbox0PortName.TabIndex = 1;
+            this.cbox0PortName.TabIndex = 3;
             this.cbox0PortName.Text = "COM4";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 61);
+            this.label1.Location = new System.Drawing.Point(49, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 12);
             this.label1.TabIndex = 18;
@@ -146,7 +146,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt1Rece);
-            this.groupBox1.Location = new System.Drawing.Point(12, 263);
+            this.groupBox1.Location = new System.Drawing.Point(27, 269);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(548, 216);
             this.groupBox1.TabIndex = 34;
@@ -160,7 +160,7 @@
             this.txt1Rece.Location = new System.Drawing.Point(3, 17);
             this.txt1Rece.Name = "txt1Rece";
             this.txt1Rece.Size = new System.Drawing.Size(542, 196);
-            this.txt1Rece.TabIndex = 0;
+            this.txt1Rece.TabIndex = 12;
             this.txt1Rece.Text = "";
             // 
             // groupBox2
@@ -179,17 +179,17 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 7);
+            this.groupBox2.Location = new System.Drawing.Point(30, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(254, 222);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.Size = new System.Drawing.Size(328, 222);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "设置：";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 198);
+            this.label8.Location = new System.Drawing.Point(74, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 37;
@@ -198,19 +198,19 @@
             // comb0Devices
             // 
             this.comb0Devices.FormattingEnabled = true;
-            this.comb0Devices.Location = new System.Drawing.Point(89, 193);
+            this.comb0Devices.Location = new System.Drawing.Point(132, 199);
             this.comb0Devices.Name = "comb0Devices";
             this.comb0Devices.Size = new System.Drawing.Size(147, 20);
-            this.comb0Devices.TabIndex = 36;
+            this.comb0Devices.TabIndex = 8;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton2.Location = new System.Drawing.Point(141, 21);
+            this.radioButton2.Location = new System.Drawing.Point(184, 27);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(62, 16);
-            this.radioButton2.TabIndex = 35;
+            this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "报警灯";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -220,10 +220,10 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton1.Location = new System.Drawing.Point(33, 21);
+            this.radioButton1.Location = new System.Drawing.Point(76, 27);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(49, 16);
-            this.radioButton1.TabIndex = 35;
+            this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "电表";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -243,50 +243,54 @@
             "8",
             "9",
             "10"});
-            this.cbox7ID.Location = new System.Drawing.Point(366, 182);
+            this.cbox7ID.Location = new System.Drawing.Point(461, 181);
             this.cbox7ID.Name = "cbox7ID";
             this.cbox7ID.Size = new System.Drawing.Size(67, 20);
-            this.cbox7ID.TabIndex = 35;
+            this.cbox7ID.TabIndex = 10;
             this.cbox7ID.Text = "1";
+            this.cbox7ID.SelectedIndexChanged += new System.EventHandler(this.cbox7ID_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(313, 185);
+            this.label5.Location = new System.Drawing.Point(408, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 12);
             this.label5.TabIndex = 36;
             this.label5.Text = "电表ID:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(301, 213);
+            this.label7.Location = new System.Drawing.Point(396, 212);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 12);
             this.label7.TabIndex = 38;
             this.label7.Text = "电表超时:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txt6timeOff
             // 
-            this.txt6timeOff.Location = new System.Drawing.Point(366, 208);
+            this.txt6timeOff.Location = new System.Drawing.Point(461, 207);
             this.txt6timeOff.Mask = "999";
             this.txt6timeOff.Name = "txt6timeOff";
             this.txt6timeOff.Size = new System.Drawing.Size(69, 21);
-            this.txt6timeOff.TabIndex = 39;
+            this.txt6timeOff.TabIndex = 11;
             this.txt6timeOff.Text = "120";
+            this.txt6timeOff.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt6timeOff_MaskInputRejected);
             // 
             // btn2NewTest
             // 
             this.btn2NewTest.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn2NewTest.Location = new System.Drawing.Point(304, 68);
+            this.btn2NewTest.Location = new System.Drawing.Point(397, 74);
             this.btn2NewTest.Name = "btn2NewTest";
             this.btn2NewTest.Size = new System.Drawing.Size(131, 78);
-            this.btn2NewTest.TabIndex = 0;
+            this.btn2NewTest.TabIndex = 9;
             this.btn2NewTest.Text = "测试";
             this.btn2NewTest.UseVisualStyleBackColor = true;
             this.btn2NewTest.Click += new System.EventHandler(this.btn2NewTest_Click);
@@ -295,7 +299,7 @@
             // 
             this.lbl0Msg.AutoSize = true;
             this.lbl0Msg.ForeColor = System.Drawing.Color.Red;
-            this.lbl0Msg.Location = new System.Drawing.Point(13, 234);
+            this.lbl0Msg.Location = new System.Drawing.Point(28, 240);
             this.lbl0Msg.Name = "lbl0Msg";
             this.lbl0Msg.Size = new System.Drawing.Size(47, 12);
             this.lbl0Msg.TabIndex = 40;
@@ -305,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 491);
+            this.ClientSize = new System.Drawing.Size(597, 501);
             this.Controls.Add(this.lbl0Msg);
             this.Controls.Add(this.txt6timeOff);
             this.Controls.Add(this.label7);
