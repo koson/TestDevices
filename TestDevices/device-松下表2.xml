@@ -1,27 +1,6 @@
 ﻿<Device>
   <cmdInfos>
     <CmdInfo>
-      <name>yearmonth</name>
-      <address>00A3</address>
-      <csharpType>System.Int16</csharpType>
-      <unitFactor>0</unitFactor>
-      <daDuan>false</daDuan>
-    </CmdInfo>
-    <CmdInfo>
-      <name>dayhour</name>
-      <address>00A3</address>
-      <csharpType>System.Int16</csharpType>
-      <unitFactor>0</unitFactor>
-      <daDuan>false</daDuan>
-    </CmdInfo>
-    <CmdInfo>
-      <name>minutesecond</name>
-      <address>00A3</address>
-      <csharpType>System.Int16</csharpType>
-      <unitFactor>0</unitFactor>
-      <daDuan>false</daDuan>
-    </CmdInfo>
-    <CmdInfo>
       <name>zljyggl</name>
       <address>0064</address>
       <csharpType>System.UInt32</csharpType>
