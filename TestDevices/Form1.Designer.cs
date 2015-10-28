@@ -132,7 +132,6 @@
             this.cbox0PortName.Name = "cbox0PortName";
             this.cbox0PortName.Size = new System.Drawing.Size(147, 20);
             this.cbox0PortName.TabIndex = 3;
-            this.cbox0PortName.Text = "COM4";
             // 
             // label1
             // 

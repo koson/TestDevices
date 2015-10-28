@@ -65,14 +65,22 @@ namespace TestDevices
         }
         void autowith()
         {
-            groupBox1.Width = this.Width - groupBox1.Left - 20;
+            groupBox1.Width = this.Width - groupBox1.Left - 30;
             groupBox1.Height = this.Height - groupBox1.Top - 50;
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
-                cbox1BaudRate.Text = "9600";
+                if (cbox0PortName.Text.ToLower().Equals("com4"))
+                {
+                    cbox1BaudRate.Text = "19200";
+                }
+                else
+                {
+                    cbox1BaudRate.Text = "9600";
+                }
+
                 cbox2DataBits.Text = "8";
                 cbox3Parity.SelectedIndex = 1;
                 cbox4StopBits.SelectedIndex = 1;
@@ -329,7 +337,7 @@ namespace TestDevices
                 }
                 getInfoPower("测试电表：[ " + cbox7ID.Text + " ]完成。");
 
-                MessageBox.Show("Success：测试成功。使用毫秒[" + timer.ElapsedMilliseconds + "],时间[" + timer.Elapsed + "]");
+                MessageBox.Show("Success：测试成功。使用毫秒[" + timer.ElapsedMilliseconds + " ms],时间[" + timer.Elapsed + "]");
 
             }
             catch (Exception ex)
@@ -347,7 +355,7 @@ namespace TestDevices
                 {
                     timer.Stop();
                 }
-                getInfoPower("####################使用毫秒[" + timer.ElapsedMilliseconds + "],时间[" + timer.Elapsed + "]");
+                getInfoPower("####################使用毫秒[" + timer.ElapsedMilliseconds + " ms],时间[" + timer.Elapsed + "]");
 
                 if (_sp.IsOpen)
                 {
@@ -478,7 +486,7 @@ namespace TestDevices
                 }
                 getInfoPower("测试电表：[ " + cbox7ID.Text + " ]完成。");
                 timer.Stop();
-                MessageBox.Show("Success：测试成功。使用毫秒[" + timer.ElapsedMilliseconds + "],时间[" + timer.Elapsed + "]");
+                MessageBox.Show("Success：测试成功。使用毫秒[" + timer.ElapsedMilliseconds + " ms],时间[" + timer.Elapsed + "]");
 
             }
             catch (Exception ex)
@@ -491,7 +499,7 @@ namespace TestDevices
                 {
                     timer.Stop();
                 }
-                getInfoPower("####################使用毫秒[" + timer.ElapsedMilliseconds + "],时间[" + timer.Elapsed + "]");
+                getInfoPower("####################使用毫秒[" + timer.ElapsedMilliseconds + " ms],时间[" + timer.Elapsed + "]");
                 if (_sp.IsOpen)
                 {
                     _sp.Close();
